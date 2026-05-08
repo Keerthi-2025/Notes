@@ -23,7 +23,7 @@ export const Login = () => {
             <button  type="submit" className='btn-primary'>Login</button>
 
             <p>Not regsitered yet?{" "}
-              <Link to="/signup" className="font-medium underline">Create and account</Link>
+              <Link to="/signup" className="font-medium underline">Create an account</Link>
             </p>
          
         </form>
