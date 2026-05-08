@@ -11,11 +11,16 @@ export const Login = () => {
   const [error, setError] = useState(null);
 
   const handleLogin = async (e) =>{
-    e.preventDeafault();
+    e.preventDefault();
 
 
     if(!validateEmail(email)){
       setError("Please enter a valid email address:")
+      return;
+    }
+
+    if(!password){
+      setError("Please enter the password");
       return;
     }
   }
@@ -30,7 +35,7 @@ export const Login = () => {
           <h4 className='text-2xl mb-7'>Login </h4>
             {/* <input type='text' placeholder='Email' className='input-box'/> */}
 
-            < input
+            <input
             type='text'
             placeholder='Email'
             className='input-box'
