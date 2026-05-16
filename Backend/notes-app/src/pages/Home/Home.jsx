@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import NoteCard from '../../components/Cards/NoteCard'
+import { MdAdd } from 'react-icons/md'
 
 const Home = () => {
   return (
@@ -9,16 +10,19 @@ const Home = () => {
 <Navbar/>
 
 <div className='container mx-auto'>
-  <NoteCard 
+  <div className='grid grid-cols-3 gap-4 mt-8'>
+    <NoteCard 
   title="meeting on tommorow"
   date="3rd april 2025"
-  content="meeting "
+  content="meeting at 12 morning everyone should come to the office for the meeting"
   isPinned={true}
   onEdit={()=>{}}
   onDelete={()=>{}}
   onPinNote={()=>{}}/>
-
+    </div>
 </div>
+
+<button className='w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-400 hover:bg-blue-600 absolute right-10 bottom-10'><MdAdd className='text-2xl text-white'/></button>
 
 </>
   
