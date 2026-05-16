@@ -23,6 +23,8 @@ export const Login = () => {
       setError("Please enter the password");
       return;
     }
+
+    setError("")
   }
 
   return (
