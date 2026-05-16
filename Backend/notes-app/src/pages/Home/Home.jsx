@@ -1,9 +1,14 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/Navbar'
 
 const Home = () => {
   return (
-    <div className='text-red-600'>Home</div>
-  )
+
+<>
+<Navbar/>
+</>  
+
+)
 }
 
 export default Home
