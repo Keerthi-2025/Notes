@@ -21,10 +21,12 @@ const AddEditNotes = ({noteData, type, onClose}) => {
   const handleAddNote = () =>{
     if(!title){
       setError("Please enter the title");
+      return;
     };
 
     if(!content){
       setError("Please enter the content");
+      return;
     };
 
     setError("");
