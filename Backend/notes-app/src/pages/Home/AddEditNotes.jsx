@@ -24,6 +24,7 @@ const AddEditNotes = () => {
 
       <div className='mt-3'>
         <label className='input-label'>Tags</label>
+        <TagInput/>
       </div>
 
       <button className='bg-blue-600 mt-5 w-full p-3 font-medium'>ADD</button>
