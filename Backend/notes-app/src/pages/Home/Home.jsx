@@ -9,7 +9,7 @@ const Home = () => {
 
   const [openAddEditModal, setOpenAddEditModal] = useState({
     isShown: false,
-    type: "addd",
+    type: "add",
     date: null,
   });
 
@@ -42,14 +42,20 @@ className='w-16 h-16 flex items-center justify-center rounded-2xl bg-blue-400 ho
   onRequestClose={() =>{}}
   style={{
     overlay:{
-      backgroundColor: "rgba(0,0,0,0,2",
+      backgroundColor: "rgba(0,0,0,0,2)",
     },
   }}
   contentLabel =""
   className="w-full max-h-3/4 bg-white mx-auto mt-14 p-5 overflow-scroll"
 >
 
-<AddEditNotes/>
+<AddEditNotes
+type={openAddEditModal}
+noteData={openAddEditModal.data}
+onClose={() =>{
+  setOpenAddEditModal({isShown: false, type: "add", data: null});
+
+}}/>
 </Modal>
 </>
   
